@@ -1,9 +1,9 @@
 object FrmCadVinil: TFrmCadVinil
   Left = 0
   Top = 0
-  Caption = 'FrmCadVinil'
+  Caption = 'Form1'
   ClientHeight = 800
-  ClientWidth = 360
+  ClientWidth = 390
   Fill.Color = xCC141518
   Fill.Kind = Solid
   FormFactor.Width = 320
@@ -14,7 +14,7 @@ object FrmCadVinil: TFrmCadVinil
     Align = Top
     Fill.Color = xCC141518
     Sides = [Bottom]
-    Size.Width = 360.000000000000000000
+    Size.Width = 390.000000000000000000
     Size.Height = 60.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xCC26272B
@@ -86,7 +86,7 @@ object FrmCadVinil: TFrmCadVinil
       Margins.Top = 4.000000000000000000
       Margins.Right = 4.000000000000000000
       Margins.Bottom = 4.000000000000000000
-      Position.X = 306.000000000000000000
+      Position.X = 336.000000000000000000
       Position.Y = 4.000000000000000000
       Size.Width = 50.000000000000000000
       Size.Height = 52.000000000000000000
@@ -95,7 +95,7 @@ object FrmCadVinil: TFrmCadVinil
     object lblTituloNovo: TLabel
       Align = Client
       StyledSettings = []
-      Size.Width = 244.000000000000000000
+      Size.Width = 274.000000000000000000
       Size.Height = 60.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Nunito'
@@ -107,21 +107,21 @@ object FrmCadVinil: TFrmCadVinil
       TabOrder = 2
     end
   end
-  object layNovoVinil: TLayout
+  object Layout1: TLayout
     Align = Top
     Margins.Left = 20.000000000000000000
     Margins.Top = 20.000000000000000000
     Margins.Right = 20.000000000000000000
     Position.X = 20.000000000000000000
     Position.Y = 80.000000000000000000
-    Size.Width = 320.000000000000000000
+    Size.Width = 350.000000000000000000
     Size.Height = 125.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object lblNovoVinil: TLabel
       Align = Top
       StyledSettings = []
-      Size.Width = 320.000000000000000000
+      Size.Width = 350.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Nunito'
@@ -136,7 +136,7 @@ object FrmCadVinil: TFrmCadVinil
       Align = Top
       TabOrder = 3
       Position.Y = 49.000000000000000000
-      Size.Width = 320.000000000000000000
+      Size.Width = 350.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
@@ -145,14 +145,14 @@ object FrmCadVinil: TFrmCadVinil
     Align = Bottom
     Fill.Color = claCornflowerblue
     Position.Y = 750.000000000000000000
-    Size.Width = 360.000000000000000000
+    Size.Width = 390.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Stroke.Kind = None
     object btnSalvarVinil: TSpeedButton
       Align = Client
       StyledSettings = []
-      Size.Width = 360.000000000000000000
+      Size.Width = 390.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       Text = 'Gravar'
@@ -162,7 +162,7 @@ object FrmCadVinil: TFrmCadVinil
       TextSettings.FontColor = claWhite
     end
   end
-  object circImage: TCircle
+  object Circle1: TCircle
     Align = Center
     Fill.Bitmap.Bitmap.PNG = {
       89504E470D0A1A0A0000000D49484452000000C8000000C80806000000AD58AE
@@ -285,21 +285,5 @@ object FrmCadVinil: TFrmCadVinil
     Size.Height = 150.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF9E9E9E
-    object lblEditarCapa: TLabel
-      Align = Bottom
-      StyledSettings = []
-      Margins.Bottom = -30.000000000000000000
-      Position.Y = 166.000000000000000000
-      Size.Width = 150.000000000000000000
-      Size.Height = 14.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'Nunito'
-      TextSettings.Font.Size = 14.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      TextSettings.HorzAlign = Center
-      Text = 'Novo Vinil'
-      TabOrder = 2
-    end
   end
 end

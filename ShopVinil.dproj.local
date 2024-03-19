@@ -2,11 +2,16 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2024/03/18 11:25:40.000.370,=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>2024/03/18 11:26:39.000.781,C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.fmx=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.fmx</Transaction>
     <Transaction>2024/03/18 11:26:39.000.781,C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.pas=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2024/03/18 11:26:39.000.781,C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.fmx=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.fmx</Transaction>
     <Transaction>2024/03/18 11:27:38.000.391,C:\Users\f_cot\Documents\GitHub\ShopVinil\ShopVinil.dproj=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
     <Transaction>2024/03/19 12:35:05.849,=C:\Users\f_cot\Documents\GitHub\ShopVinil\Unit1.pas</Transaction>
     <Transaction>2024/03/19 12:36:32.340,C:\Users\f_cot\Documents\GitHub\ShopVinil\untCadVinil.pas=C:\Users\f_cot\Documents\GitHub\ShopVinil\Unit1.pas</Transaction>
     <Transaction>2024/03/19 12:36:32.340,C:\Users\f_cot\Documents\GitHub\ShopVinil\untCadVinil.fmx=C:\Users\f_cot\Documents\GitHub\ShopVinil\Unit1.fmx</Transaction>
+    <Transaction>2024/03/19 15:22:34.517,=C:\Users\f_cot\Documents\GitHub\ShopVinil\Unit1.pas</Transaction>
+    <Transaction>2024/03/19 15:24:32.031,C:\Users\f_cot\Documents\GitHub\ShopVinil\untTracks.fmx=C:\Users\f_cot\Documents\GitHub\ShopVinil\Unit1.fmx</Transaction>
+    <Transaction>2024/03/19 15:24:32.031,C:\Users\f_cot\Documents\GitHub\ShopVinil\untTracks.pas=C:\Users\f_cot\Documents\GitHub\ShopVinil\Unit1.pas</Transaction>
+    <Transaction>2024/03/19 16:28:44.331,C:\Users\f_cot\Documents\GitHub\ShopVinil\untTrackes.fmx=C:\Users\f_cot\Documents\GitHub\ShopVinil\untTracks.fmx</Transaction>
+    <Transaction>2024/03/19 16:28:44.331,C:\Users\f_cot\Documents\GitHub\ShopVinil\untTrackes.pas=C:\Users\f_cot\Documents\GitHub\ShopVinil\untTracks.pas</Transaction>
   </Transactions>
 </BorlandProject>

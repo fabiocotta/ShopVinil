@@ -13,13 +13,12 @@ type
     imgVoltar: TImage;
     imgRemover: TImage;
     lblTituloNovo: TLabel;
-    layNovoVinil: TLayout;
+    Layout1: TLayout;
     lblNovoVinil: TLabel;
     edtNomeVinil: TEdit;
     recFooter: TRectangle;
     btnSalvarVinil: TSpeedButton;
-    circImage: TCircle;
-    lblEditarCapa: TLabel;
+    Circle1: TCircle;
   private
     { Private declarations }
   public

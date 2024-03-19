@@ -5,7 +5,7 @@ uses
   FMX.Forms,
   untPrincipal in 'untPrincipal.pas' {frmPrincipal},
   untCadVinil in 'untCadVinil.pas' {FrmCadVinil},
-  untTrackes in 'untTrackes.pas' {FrmTrackes};
+  untTracks in 'untTracks.pas' {FrmTracks};
 
 {$R *.res}
 
@@ -13,6 +13,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TFrmCadVinil, FrmCadVinil);
-  Application.CreateForm(TFrmTrackes, FrmTrackes);
+  Application.CreateForm(TFrmTracks, FrmTracks);
   Application.Run;
 end.

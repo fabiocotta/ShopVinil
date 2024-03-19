@@ -5,7 +5,7 @@ uses
   FMX.Forms,
   untPrincipal in 'untPrincipal.pas' {frmPrincipal},
   untCadVinil in 'untCadVinil.pas' {FrmCadVinil},
-  untTrackes in 'untTrackes.pas' {FrmTrackes};
+  untTracks in 'untTracks.pas' {FrmTrackes};
 
 {$R *.res}
 

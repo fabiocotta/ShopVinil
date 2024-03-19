@@ -1,7 +1,7 @@
 object FrmCadVinil: TFrmCadVinil
   Left = 0
   Top = 0
-  Caption = 'FrmCadVinil'
+  Caption = 'Form1'
   ClientHeight = 800
   ClientWidth = 360
   Fill.Color = xCC141518
@@ -107,7 +107,7 @@ object FrmCadVinil: TFrmCadVinil
       TabOrder = 2
     end
   end
-  object layNovoVinil: TLayout
+  object Layout1: TLayout
     Align = Top
     Margins.Left = 20.000000000000000000
     Margins.Top = 20.000000000000000000
@@ -162,7 +162,7 @@ object FrmCadVinil: TFrmCadVinil
       TextSettings.FontColor = claWhite
     end
   end
-  object circImage: TCircle
+  object Circle1: TCircle
     Align = Center
     Fill.Bitmap.Bitmap.PNG = {
       89504E470D0A1A0A0000000D49484452000000C8000000C80806000000AD58AE
