@@ -60,13 +60,13 @@ object frmPrincipal: TfrmPrincipal
           PNG = {
             89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
             35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-            00C1494441545847EDD5C10D82401005D09D3D9A682B6A0550029D4007968076
-            62094B05622BA257C79D646E189159379AF85FB26C664E3F24F01D00C00F29EA
-            5B5536C3A9A8875257C9BCDEC988781D9F1B222A7495EC63E17240382B84B342
-            382B84B322BD9F922A9AF1C797DA9213F44C62BE9FBBC3EAA8E3C8CB70D29552
-            493A66C07DD82FB73A8C4CBCB94B45E46367BE65F69B73E44368179D4EF994CD
-            75170FCBADAB64F85AAD10CE0AE1AC10CEEA3FC23173AC21EEA5CC750500F07D
-            CE3D00EDBA2F58FC3F81690000000049454E44AE426082}
+            00C3494441545847EDD5CD0DC2300C05E0B8DC38C028C004CD08DDA4DD801180
+            4D18219D80320A7FC7626AC9B7224A1D2290789F1445F6E92952FB1C00C00FC9
+            CB5BE1ABD3212F2F5E57D132BDA311F1C2B9C99288725D45FB58B81410CE0AE1
+            AC10CE0AE1AC48EFA7A48A46FCF1A5B6E4043D8398EFC77A37DBEBD8F3329C74
+            A554928E09B44DD8CE573AF40CBCDCB920CABACE7CCBE897739485B099D63AA5
+            E3ABEBBA3B2CB7AEA2E16BB542382B84B34238ABFF08C7CC5D0DB58D94B9AE00
+            00BECFB907E33E2F561D0993850000000049454E44AE426082}
           FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\add.png'
         end>
       Align = Right
@@ -101,21 +101,77 @@ object frmPrincipal: TfrmPrincipal
     HeaderAppearanceClassName = 'TListHeaderObjects'
     FooterAppearanceClassName = 'TListHeaderObjects'
     Transparent = True
+    ItemSpaces.Left = 0.000000000000000000
+    ItemSpaces.Right = 0.000000000000000000
     Align = Client
     Size.Width = 390.000000000000000000
     Size.Height = 740.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 2
+    TabOrder = 1
+    ItemAppearance.ItemHeight = 160
+    ItemAppearance.ItemEditHeight = 150
     ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
       item
-        AppearanceObjectName = 'Text1'
+        AppearanceObjectName = 'txtTituloVinil'
         AppearanceClassName = 'TTextObjectAppearance'
-      end>
-    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+        Appearance.TextAlign = Leading
+        Appearance.Width = 169.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 105.000000000000000000
+        Appearance.PlaceOffset.Y = 10.000000000000000000
+      end
       item
-        AppearanceObjectName = 'Text1'
+        AppearanceObjectName = 'txtArtistaVinil'
         AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 169.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 105.000000000000000000
+        Appearance.PlaceOffset.Y = 51.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'imgCapaVinil'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 89.000000000000000000
+        Appearance.Height = 92.000000000000000000
+        Appearance.PlaceOffset.X = 8.000000000000000000
+        Appearance.PlaceOffset.Y = 8.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'txtValorVinil'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Width = 81.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 299.000000000000000000
+        Appearance.PlaceOffset.Y = 10.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Image5'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 57.000000000000000000
+        Appearance.Height = 55.000000000000000000
+        Appearance.PlaceOffset.X = 104.000000000000000000
+        Appearance.PlaceOffset.Y = 92.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Image6'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 57.000000000000000000
+        Appearance.Height = 55.000000000000000000
+        Appearance.PlaceOffset.X = 168.000000000000000000
+        Appearance.PlaceOffset.Y = 92.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Image7'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 57.000000000000000000
+        Appearance.Height = 55.000000000000000000
+        Appearance.PlaceOffset.X = 232.000000000000000000
+        Appearance.PlaceOffset.Y = 92.000000000000000000
       end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <>
+    StyleLookup = 'listPrincipalStyle1'
     CanSwipeDelete = False
+    ShowSelection = False
   end
 end

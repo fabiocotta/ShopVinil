@@ -51,8 +51,23 @@ object frmPrincipal: TfrmPrincipal
       Size.PlatformDefault = False
     end
     object img: TImage
+      MultiResBitmap.Height = 39
+      MultiResBitmap.Width = 39
       MultiResBitmap = <
         item
+          Width = 39
+          Height = 39
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
+            35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00C3494441545847EDD5C10DC2300C05D038470E5D8532413A423769376004CA
+            268C904E4059A5C03526917C2BA2D4A10289FFA428B20FD597A5D40600E087B8
+            E65E57ED7876CDB59256362B773622DEC6CF9544E4A495ED63E1D680705A08A7
+            85705A08A745723F9556D1823F7E5A5BE97839B398C3A53F162729275E864BBB
+            320EB794720561F05DB19362626672634D64E3CE7CCBE2C919B2DE1F36BD54EB
+            A9DADB3E1E4EB7B4B2E1B56A219C16C269219CD67F8463E6B886C29096B9B400
+            00BECF9807E87C2F572D2941AA0000000049454E44AE426082}
+          FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\add.png'
         end>
       Align = Right
       Margins.Left = 4.000000000000000000
@@ -79,5 +94,44 @@ object frmPrincipal: TfrmPrincipal
       Text = 'Cat'#225'logo '
       TabOrder = 2
     end
+  end
+  object listPrincipal: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Transparent = True
+    ItemSpaces.Left = 0.000000000000000000
+    ItemSpaces.Right = 0.000000000000000000
+    Align = Client
+    Size.Width = 390.000000000000000000
+    Size.Height = 740.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ItemAppearance.ItemHeight = 150
+    ItemAppearance.ItemEditHeight = 150
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 169.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 112.000000000000000000
+        Appearance.PlaceOffset.Y = 32.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'Text2'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 169.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 112.000000000000000000
+        Appearance.PlaceOffset.Y = 72.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <>
+    StyleLookup = 'listPrincipalStyle1'
+    CanSwipeDelete = False
+    ShowSelection = False
   end
 end

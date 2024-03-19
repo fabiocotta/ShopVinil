@@ -12,7 +12,7 @@ type
   TfrmPrincipal = class(TForm)
     recToolbar: TRectangle;
     imgMenu: TImage;
-    imgAdd: TImage;
+    img: TImage;
     lblTitulo: TLabel;
     listPrincipal: TListView;
     imgCapaVinil: TImage;

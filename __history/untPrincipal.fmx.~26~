@@ -50,7 +50,7 @@ object frmPrincipal: TfrmPrincipal
       Size.Height = 52.000000000000000000
       Size.PlatformDefault = False
     end
-    object imgAdd: TImage
+    object img: TImage
       MultiResBitmap.Height = 39
       MultiResBitmap.Width = 39
       MultiResBitmap = <

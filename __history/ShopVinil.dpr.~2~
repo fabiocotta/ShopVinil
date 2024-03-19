@@ -4,13 +4,13 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   untPrincipal in 'untPrincipal.pas' {frmPrincipal},
-  untCadVinil in 'untCadVinil.pas' {FrmCadVinil};
+  untCadVinil in 'untCadVinil.pas' {Form1};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TFrmCadVinil, FrmCadVinil);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
