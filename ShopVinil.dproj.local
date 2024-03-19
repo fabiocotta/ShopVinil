@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2024/03/18 11:25:40.370,=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>2024/03/18 11:26:39.781,C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.fmx=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.fmx</Transaction>
-    <Transaction>2024/03/18 11:26:39.781,C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.pas=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
-    <Transaction>2024/03/18 11:27:38.391,C:\Users\f_cot\Documents\GitHub\ShopVinil\ShopVinil.dproj=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+	<Transactions>
+    <Transaction>2024/03/18 11:25:40.000.370,=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2024/03/18 11:26:39.000.781,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas=C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.pas</Transaction>
+    <Transaction>2024/03/18 11:26:39.000.781,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.fmx=C:\Users\f_cot\Documents\GitHub\ShopVinil\untPrincipal.fmx</Transaction>
+    <Transaction>2024/03/18 11:27:38.000.391,C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Project4.dproj=C:\Users\f_cot\Documents\GitHub\ShopVinil\ShopVinil.dproj</Transaction>
   </Transactions>
 </BorlandProject>

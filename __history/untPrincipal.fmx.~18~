@@ -1,0 +1,132 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'ShopVinil'
+  ClientHeight = 800
+  ClientWidth = 390
+  Fill.Color = xCC141518
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object recToolbar: TRectangle
+    Align = Top
+    Fill.Color = xCC141518
+    Sides = [Bottom]
+    Size.Width = 390.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xCC26272B
+    Stroke.Thickness = 2.000000000000000000
+    object imgMenu: TImage
+      MultiResBitmap.Height = 39
+      MultiResBitmap.Width = 39
+      MultiResBitmap = <
+        item
+          Width = 39
+          Height = 39
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
+            35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00D6494441545847EDD7D109825014C6F17BB488CC4027C811DAC05668839AC0
+            16097482688246483768836C0295821E226F1739049A8F728DFA7E2FF2F7E972
+            1E3C5E0100F0E3889F6F7E709B0B211D4E8D0669128D538E4AED707E903944C3
+            8C533B291F6E12B939E7E7E4169BEB4EBDF6383592791C4E971C00005D69DB10
+            2B2231E3D4C848E3D0DA73541A1BE2EE113DCF9CDA916979C7AD71E16C9B5CA1
+            2667F63039A12667D7260700D081B63FE1837ADDC31D82D4776EB2E6A83436C4
+            97DF21D4013D3246DA37842CCB2289EC132700C01F10E2052EA4390A1D4AD53E
+            0000000049454E44AE426082}
+          FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\menu.png'
+        end>
+      Align = Left
+      Margins.Left = 4.000000000000000000
+      Margins.Top = 4.000000000000000000
+      Margins.Right = 4.000000000000000000
+      Margins.Bottom = 4.000000000000000000
+      Position.X = 4.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 52.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object img: TImage
+      MultiResBitmap.Height = 39
+      MultiResBitmap.Width = 39
+      MultiResBitmap = <
+        item
+          Width = 39
+          Height = 39
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
+            35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00C1494441545847EDD5C10D82401005D09D3D9A682B6A0550029D4007968076
+            62094B05622BA257C79D646E189159379AF85FB26C664E3F24F01D00C00F29EA
+            5B5536C3A9A8875257C9BCDEC988781D9F1B222A7495EC63E17240382B84B342
+            382B84B322BD9F922A9AF1C797DA9213F44C62BE9FBBC3EAA8E3C8CB70D29552
+            493A66C07DD82FB73A8C4CBCB94B45E46367BE65F69B73E44368179D4EF994CD
+            75170FCBADAB64F85AAD10CE0AE1AC10CEEA3FC23173AC21EEA5CC750500F07D
+            CE3D00EDBA2F58FC3F81690000000049454E44AE426082}
+          FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\add.png'
+        end>
+      Align = Right
+      Margins.Left = 4.000000000000000000
+      Margins.Top = 4.000000000000000000
+      Margins.Right = 4.000000000000000000
+      Margins.Bottom = 4.000000000000000000
+      Position.X = 336.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 52.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lblTitulo: TLabel
+      Align = Client
+      StyledSettings = []
+      Size.Width = 274.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Nunito'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Cat'#225'logo '
+      TabOrder = 2
+    end
+  end
+  object listPrincipal: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    EditMode = True
+    Transparent = True
+    ItemSpaces.Left = 0.000000000000000000
+    ItemSpaces.Right = 0.000000000000000000
+    Align = Client
+    Size.Width = 390.000000000000000000
+    Size.Height = 740.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ItemAppearance.ItemEditHeight = 150
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 209.000000000000000000
+        Appearance.Height = 25.000000000000000000
+        Appearance.PlaceOffset.X = 80.000000000000000000
+        Appearance.PlaceOffset.Y = 16.000000000000000000
+      end>
+    StyleLookup = 'listPrincipalStyle1'
+    CanSwipeDelete = False
+    ShowSelection = False
+  end
+end
