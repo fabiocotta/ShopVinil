@@ -1,0 +1,80 @@
+unit untPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListView.Types,
+  FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView;
+
+type
+  TfrmPrincipal = class(TForm)
+    recToolbar: TRectangle;
+    imgMenu: TImage;
+    imgAdd: TImage;
+    lblTitulo: TLabel;
+    listPrincipal: TListView;
+    imgCapaVinil: TImage;
+    imgEditarVinil: TImage;
+    imgTracks: TImage;
+    imgPreview: TImage;
+    procedure imgAddClick(Sender: TObject);
+    procedure listPrincipalItemClickEx(const Sender: TObject;
+      ItemIndex: Integer; const LocalClickPos: TPointF;
+      const ItemObject: TListItemDrawable);
+  private
+       procedure AbrirCadVinil(idVinil: integer);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses untCadVinil;
+
+procedure TfrmPrincipal.AbrirCadVinil(idVinil: integer);
+begin
+
+end;
+
+procedure TfrmPrincipal.imgAddClick(Sender: TObject);
+begin
+  //chamando tela de cadastro de vinil
+  if NOT assigned (FrmCadVinil) then
+  begin
+    Application.CreateForm(TFrmCadVinil, FrmCadVinil);
+
+    //quando o FrmCadVinil for fechado ele atualiza a list do FrmPrincipal
+    FrmCadVinil.ShowModal(
+      procedure (ModalResult: TModalResult)
+        begin
+
+        end);
+  end;
+
+end;
+
+//vamos utilizar o onItemClickEx para pegar o objeto clicado
+procedure TfrmPrincipal.listPrincipalItemClickEx(const Sender: TObject;
+  ItemIndex: Integer; const LocalClickPos: TPointF;
+  const ItemObject: TListItemDrawable);
+begin
+  if TListView(Sender).Selected <> nil then
+    begin
+
+
+    end;
+
+
+end;
+
+
+
+end.

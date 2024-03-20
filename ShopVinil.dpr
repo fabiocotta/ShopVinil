@@ -13,8 +13,5 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TFrmCadVinil, FrmCadVinil);
-  Application.CreateForm(TFrmTrackes, FrmTrackes);
-  Application.CreateForm(TfrmCadTracke, frmCadTracke);
   Application.Run;
 end.

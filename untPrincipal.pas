@@ -20,7 +20,11 @@ type
     imgTracks: TImage;
     imgPreview: TImage;
     procedure imgAddClick(Sender: TObject);
+    procedure listPrincipalItemClickEx(const Sender: TObject;
+      ItemIndex: Integer; const LocalClickPos: TPointF;
+      const ItemObject: TListItemDrawable);
   private
+       procedure AbrirCadVinil(idVinil: integer);
     { Private declarations }
   public
     { Public declarations }
@@ -33,12 +37,66 @@ implementation
 
 {$R *.fmx}
 
-uses untCadVinil;
+uses untCadVinil, untTrackes;
+
+procedure TfrmPrincipal.AbrirCadVinil(idVinil: integer);
+begin
+   //chamando tela de cadastro de vinil
+  if NOT assigned (FrmCadVinil) then
+  begin
+    Application.CreateForm(TFrmCadVinil, FrmCadVinil);
+
+    //quando o FrmCadVinil for fechado ele atualiza a list do FrmPrincipal
+    FrmCadVinil.ShowModal(
+      procedure (ModalResult: TModalResult)
+        begin
+
+        end);
+  end;
+end;
 
 procedure TfrmPrincipal.imgAddClick(Sender: TObject);
 begin
-  //chamando tela de cadastro de vinil
+  AbrirCadVinil(0);
 
 end;
+
+//vamos utilizar o onItemClickEx para pegar o objeto clicado
+procedure TfrmPrincipal.listPrincipalItemClickEx(const Sender: TObject;
+  ItemIndex: Integer; const LocalClickPos: TPointF;
+  const ItemObject: TListItemDrawable);
+begin
+  if TListView(Sender).Selected <> nil then
+    begin
+      // Img Editar
+      if ItemObject is TListItemImage then
+        begin
+          if TListItemImage(ItemObject).Name = 'imgEditar' then
+          AbrirCadVinil(0);
+
+        end;
+
+      // Img Trackes
+      if ItemObject is TListItemImage then
+        begin
+          if TListItemImage(ItemObject).Name = 'imgTrackes' then
+          begin
+          if NOT Assigned(FrmTrackes) then
+          begin
+            Application.CreateForm(TFrmTrackes, FrmTrackes);
+            FrmTrackes.Show;
+          end;
+
+
+          end;
+
+        end;
+
+    end;
+
+
+end;
+
+
 
 end.
