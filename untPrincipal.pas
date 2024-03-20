@@ -19,6 +19,7 @@ type
     imgEditarVinil: TImage;
     imgTracks: TImage;
     imgPreview: TImage;
+    procedure imgAddClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,5 +32,13 @@ var
 implementation
 
 {$R *.fmx}
+
+uses untCadVinil;
+
+procedure TfrmPrincipal.imgAddClick(Sender: TObject);
+begin
+  //chamando tela de cadastro de vinil
+
+end;
 
 end.

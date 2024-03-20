@@ -1,0 +1,163 @@
+object FrmTrackes: TFrmTrackes
+  Left = 0
+  Top = 0
+  Caption = 'FrmTrackes'
+  ClientHeight = 800
+  ClientWidth = 360
+  Fill.Color = xCC141518
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object recToolbar: TRectangle
+    Align = Top
+    Fill.Color = xCC141518
+    Sides = []
+    Size.Width = 360.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xCC26272B
+    Stroke.Thickness = 2.000000000000000000
+    object imgVoltar: TImage
+      MultiResBitmap.Height = 39
+      MultiResBitmap.Width = 39
+      MultiResBitmap = <
+        item
+          Width = 39
+          Height = 39
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
+            35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            0127494441545847EDD7DF89C24010C7F119150EC107AF033BF0AC205A51ECE0
+            B483B303AF12CF0A6CC10E140CF860606E7FB81C7A3171239B5D91F9BE6CFE80
+            7C18962492A6699A565E924A3F490F637BEABD965D6B97A4C70173B661E65592
+            661FF6B2D71EC29D61F98A880744B2253AEDED2DAFB15D9DFB0F13C927EBC5BB
+            01FAAF162E240C39E342C390132E060CDDC5C582A14A5C4C182AC5C586A19BB8
+            6B1892A5396E0C26D2FE5E2FBA85DFBF891B4FB34FB3CCCE67419AFD7CF5E6F6
+            F8AF92C9EDCCE43A1793633339BC099A49E4642657DC32157BEE12883DD7317B
+            AE38FA262BC5A1D8C04A1C8A09BC8B43B1804E381403E88C43A181B5702824B0
+            360E1581F9C83CA7BC7F0D3FF4998E0726DEB58001C8ADB7A1BDF53C61824DFD
+            B9D1344D7BFD887E011AFFCD88404422EC0000000049454E44AE426082}
+          FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\back.png'
+        end>
+      Align = Left
+      Margins.Left = 4.000000000000000000
+      Margins.Top = 4.000000000000000000
+      Margins.Right = 4.000000000000000000
+      Margins.Bottom = 4.000000000000000000
+      Position.X = 4.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 52.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lblTituloTrakes: TLabel
+      Align = Client
+      StyledSettings = []
+      Size.Width = 244.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Nunito'
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Trakes'
+      TabOrder = 2
+    end
+    object imgAddTracke: TImage
+      MultiResBitmap.Height = 39
+      MultiResBitmap.Width = 39
+      MultiResBitmap = <
+        item
+          Width = 39
+          Height = 39
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
+            35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00C3494441545847EDD5CD0DC2300C05E0B8DC38C028C004CD08DDA4DD801180
+            4D18219D80320A7FC7626AC9B7224A1D2290789F1445F6E92952FB1C00C00FC9
+            CB5BE1ABD3212F2F5E57D132BDA311F1C2B9C99288725D45FB58B81410CE0AE1
+            AC10CE0AE1AC48EFA7A48A46FCF1A5B6E4043D8398EFC77A37DBEBD8F3329C74
+            A554928E09B44DD8CE573AF40CBCDCB920CABACE7CCBE897739485B099D63AA5
+            E3ABEBBA3B2CB7AEA2E16BB542382B84B34238ABFF08C7CC5D0DB58D94B9AE00
+            00BECFB907E33E2F561D0993850000000049454E44AE426082}
+          FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\add.png'
+        end>
+      Align = Right
+      Margins.Left = 4.000000000000000000
+      Margins.Top = 4.000000000000000000
+      Margins.Right = 4.000000000000000000
+      Margins.Bottom = 4.000000000000000000
+      Position.X = 306.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 52.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object lblTituloVinil: TLabel
+    Align = Top
+    StyledSettings = []
+    Margins.Top = -10.000000000000000000
+    Position.Y = 50.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 29.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Nunito'
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00060000000000000004000000}
+    TextSettings.FontColor = xFFB8B6B6
+    TextSettings.HorzAlign = Center
+    Text = 'TituloVinil'
+    TabOrder = 2
+  end
+  object listTrackes: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Transparent = True
+    ItemSpaces.Left = 0.000000000000000000
+    ItemSpaces.Right = 0.000000000000000000
+    Align = Client
+    Size.Width = 360.000000000000000000
+    Size.Height = 721.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ItemAppearance.ItemHeight = 160
+    ItemAppearance.ItemEditHeight = 150
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'txtTituloVinil'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 169.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 105.000000000000000000
+        Appearance.PlaceOffset.Y = 10.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'txtArtistaVinil'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 169.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 105.000000000000000000
+        Appearance.PlaceOffset.Y = 51.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'imgCapaVinil'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 89.000000000000000000
+        Appearance.Height = 92.000000000000000000
+        Appearance.PlaceOffset.X = 8.000000000000000000
+        Appearance.PlaceOffset.Y = 8.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <>
+    StyleLookup = 'listPrincipalStyle1'
+    CanSwipeDelete = False
+    ShowSelection = False
+  end
+end

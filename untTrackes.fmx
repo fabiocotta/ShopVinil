@@ -111,6 +111,79 @@ object FrmTrackes: TFrmTrackes
     TextSettings.FontColor = xFFB8B6B6
     TextSettings.HorzAlign = Center
     Text = 'TituloVinil'
+    TabOrder = 2
+  end
+  object listTrackes: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Transparent = True
+    ItemSpaces.Left = 0.000000000000000000
+    ItemSpaces.Right = 0.000000000000000000
+    Align = Client
+    Size.Width = 360.000000000000000000
+    Size.Height = 721.000000000000000000
+    Size.PlatformDefault = False
     TabOrder = 1
+    ItemAppearance.ItemHeight = 90
+    ItemAppearance.ItemEditHeight = 150
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'txtNomeTracke'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 256.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 49.000000000000000000
+        Appearance.PlaceOffset.Y = 10.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'txtTempoTracke'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.TextAlign = Leading
+        Appearance.Width = 41.000000000000000000
+        Appearance.Height = 33.000000000000000000
+        Appearance.PlaceOffset.X = 312.000000000000000000
+        Appearance.PlaceOffset.Y = 10.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'imgSeta'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 22.000000000000000000
+        Appearance.Height = 22.000000000000000000
+        Appearance.PlaceOffset.X = 16.000000000000000000
+        Appearance.PlaceOffset.Y = 15.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <>
+    StyleLookup = 'listPrincipalStyle1'
+    CanSwipeDelete = False
+    ShowSelection = False
+    object Image1: TImage
+      MultiResBitmap.Height = 39
+      MultiResBitmap.Width = 39
+      MultiResBitmap = <
+        item
+          Width = 39
+          Height = 39
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000270000002708060000008CA351
+            35000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00C1494441545847EDD5C10D82401005D09D3D9A682B6A0550029D4007968076
+            62094B05622BA257C79D646E189159379AF85FB26C664E3F24F01D00C00F29EA
+            5B5536C3A9A8875257C9BCDEC988781D9F1B222A7495EC63E17240382B84B342
+            382B84B322BD9F922A9AF1C797DA9213F44C62BE9FBBC3EAA8E3C8CB70D29552
+            493A66C07DD82FB73A8C4CBCB94B45E46367BE65F69B73E44368179D4EF994CD
+            75170FCBADAB64F85AAD10CE0AE1AC10CEEA3FC23173AC21EEA5CC750500F07D
+            CE3D00EDBA2F58FC3F81690000000049454E44AE426082}
+          FileName = 'C:\Users\f_cot\Documents\GitHub\ShopVinil\Imagens\add.png'
+        end>
+      Position.X = 24.000000000000000000
+      Position.Y = 576.000000000000000000
+      Size.Width = 22.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
   end
 end

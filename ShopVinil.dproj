@@ -199,6 +199,10 @@
             <Form>FrmTrackes</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="untCadTracke.pas">
+            <Form>frmCadTracke</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
