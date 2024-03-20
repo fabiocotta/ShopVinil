@@ -15,16 +15,20 @@ type
     imgAdd: TImage;
     lblTitulo: TLabel;
     listPrincipal: TListView;
-    imgCapaVinil: TImage;
     imgEditarVinil: TImage;
-    imgTracks: TImage;
+    imgTrackes: TImage;
     imgPreview: TImage;
+    imgCapaVinil: TImage;
     procedure imgAddClick(Sender: TObject);
     procedure listPrincipalItemClickEx(const Sender: TObject;
       ItemIndex: Integer; const LocalClickPos: TPointF;
       const ItemObject: TListItemDrawable);
+    procedure imgCapaVinilClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
        procedure AbrirCadVinil(idVinil: integer);
+    procedure AddVinilLista(idVinil: integer; nomeVinil: string; artistaVinil: string;
+      valorVinil: string);
     { Private declarations }
   public
     { Public declarations }
@@ -38,6 +42,29 @@ implementation
 {$R *.fmx}
 
 uses untCadVinil, untTrackes;
+
+procedure TfrmPrincipal.AddVinilLista(idVinil: integer; nomeVinil:string; artistaVinil:string; valorVinil:string);
+begin
+  with listPrincipal.Items.Add do
+  begin
+    Height := 150;
+    TListItemText(Objects.FindDrawable('txtTituloVinil')).Text    := nomeVinil;
+    TListItemText(Objects.FindDrawable('txtArtistaVinil')).Text   := artistaVinil;
+    TListItemText(Objects.FindDrawable('txtValorVinil')).Text     := valorVinil;
+    TListItemImage(Objects.FindDrawable('imgCapaVinil')).Bitmap   := imgCapaVinil.Bitmap;
+    TListItemImage(Objects.FindDrawable('imgEditar')).Bitmap      := imgEditarVinil.Bitmap;
+    TListItemImage(Objects.FindDrawable('imgTrackes')).Bitmap     := imgTrackes.Bitmap;
+  end;
+
+end;
+
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  AddVinilLista(0, 'Nevermind [Disco de Vinil]','NIRVANA','R$ 140,00');
+  AddVinilLista(0, 'Nevermind [Disco de Vinil]','NIRVANA','R$ 140,00');
+
+end;
 
 procedure TfrmPrincipal.AbrirCadVinil(idVinil: integer);
 begin
@@ -58,6 +85,11 @@ end;
 procedure TfrmPrincipal.imgAddClick(Sender: TObject);
 begin
   AbrirCadVinil(0);
+
+end;
+
+procedure TfrmPrincipal.imgCapaVinilClick(Sender: TObject);
+begin
 
 end;
 
