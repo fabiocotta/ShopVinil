@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/03/21 22:31:49.192,=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2024/03/21 22:35:27.333,C:\Users\f_cot\Documents\GitHub\ShopVinil\backend\untPrincipal.pas=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.pas</Transaction>
+    <Transaction>2024/03/21 22:35:27.333,C:\Users\f_cot\Documents\GitHub\ShopVinil\backend\untPrincipal.fmx=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Unit4.fmx</Transaction>
+    <Transaction>2024/03/21 22:35:44.791,C:\Users\f_cot\Documents\GitHub\ShopVinil\backend\VinilServer.dproj=C:\Users\f_cot\Documents\Embarcadero\Studio\Projects\Project4.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
