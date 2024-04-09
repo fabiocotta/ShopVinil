@@ -1,0 +1,45 @@
+unit untPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, uRESTDWComponentBase, uRESTDWBasic, uRESTDWIdBase;
+
+type
+  TfrmPrincipal = class(TForm)
+    Switch: TSwitch;
+    Label1: TLabel;
+    ServicePooler: TRESTDWIdServicePooler;
+    procedure SwitchSwitch(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses untDM;
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  ServicePooler.ServerMethodClass := TDM;
+  ServicePooler.Active := Switch.IsChecked;
+
+  // conexao com o banco de dados
+end;
+
+procedure TfrmPrincipal.SwitchSwitch(Sender: TObject);
+begin
+  ServicePooler.Active := Switch.IsChecked;
+end;
+
+end.

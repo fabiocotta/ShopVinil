@@ -116,7 +116,7 @@ begin
           if NOT Assigned(FrmTrackes) then
           begin
             Application.CreateForm(TFrmTrackes, FrmTrackes);
-            FrmTrackes.Show;
+            FrmTrackes.ShowModal;
           end;
 
 

@@ -5,12 +5,15 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation;
+  FMX.Controls.Presentation, uRESTDWComponentBase, uRESTDWBasic, uRESTDWIdBase;
 
 type
   TfrmPrincipal = class(TForm)
-    Switch1: TSwitch;
+    Switch: TSwitch;
     Label1: TLabel;
+    ServicePooler: TRESTDWIdServicePooler;
+    procedure SwitchSwitch(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,5 +26,29 @@ var
 implementation
 
 {$R *.fmx}
+
+uses untDM;
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+var
+erro:string;
+
+begin
+  ServicePooler.ServerMethodClass := TDM;
+  ServicePooler.Active := Switch.IsChecked;
+
+  // conexao com o banco de dados
+  erro := dm.CarregarConfig;
+
+  if erro <> 'OK' then
+    showmessage(erro);
+
+
+end;
+
+procedure TfrmPrincipal.SwitchSwitch(Sender: TObject);
+begin
+  ServicePooler.Active := Switch.IsChecked;
+end;
 
 end.

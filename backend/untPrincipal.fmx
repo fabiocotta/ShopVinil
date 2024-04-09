@@ -2,18 +2,19 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Frm Server'
-  ClientHeight = 180
-  ClientWidth = 291
+  ClientHeight = 185
+  ClientWidth = 403
   Fill.Kind = Solid
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnShow = FormShow
   DesignerMasterStyle = 0
-  object Switch1: TSwitch
+  object Switch: TSwitch
+    Align = Center
     IsChecked = True
-    Position.X = 104.000000000000000000
-    Position.Y = 72.000000000000000000
     TabOrder = 1
+    OnSwitch = SwitchSwitch
   end
   object Label1: TLabel
     Align = Center
@@ -25,5 +26,42 @@ object frmPrincipal: TfrmPrincipal
     TextSettings.HorzAlign = Center
     Text = 'Servidor Ativo'
     TabOrder = 2
+  end
+  object ServicePooler: TRESTDWIdServicePooler
+    Active = False
+    CORS = False
+    CORS_CustomHeaders.Strings = (
+      'Access-Control-Allow-Origin=*'
+      
+        'Access-Control-Allow-Methods=GET, POST, PATCH, PUT, DELETE, OPTI' +
+        'ONS'
+      
+        'Access-Control-Allow-Headers=Content-Type, Origin, Accept, Autho' +
+        'rization, X-CUSTOM-HEADER')
+    PathTraversalRaiseError = True
+    RequestTimeout = -1
+    ServicePort = 8082
+    ProxyOptions.ProxyPort = 0
+    AuthenticationOptions.AuthorizationOption = rdwAOBasic
+    AuthenticationOptions.OptionParams.AuthDialog = True
+    AuthenticationOptions.OptionParams.CustomDialogAuthMessage = 'Protected Space...'
+    AuthenticationOptions.OptionParams.Custom404TitleMessage = '(404) The address you are looking for does not exist'
+    AuthenticationOptions.OptionParams.Custom404BodyMessage = '404'
+    AuthenticationOptions.OptionParams.Custom404FooterMessage = 'Take me back to <a href="./">Home REST Dataware'
+    AuthenticationOptions.OptionParams.Username = '9057'
+    AuthenticationOptions.OptionParams.Password = '9057'
+    Encoding = esUtf8
+    RootPath = '/'
+    ForceWelcomeAccess = False
+    CriptOptions.Use = False
+    CriptOptions.Key = 'RDWBASEKEY256'
+    EncodeErrors = False
+    SSLVersions = []
+    SSLVerifyMode = []
+    SSLVerifyDepth = 0
+    SSLMode = sslmUnassigned
+    SSLMethod = sslvSSLv2
+    Left = 56
+    Top = 48
   end
 end
