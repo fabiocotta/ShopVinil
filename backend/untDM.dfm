@@ -20,7 +20,7 @@ object DM: TDM
     IgnoreInvalidParams = False
     Events = <
       item
-        Routes = [crAll]
+        Routes = [crAll, crPatch]
         NeedAuthorization = True
         Params = <>
         DataMode = dmRAW

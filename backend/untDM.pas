@@ -44,9 +44,9 @@ type
       const RequestType: TRequestType; var StatusCode: Integer;
       RequestHeader: TStringList);
   private
-    function ListarVinil(id_vinil: integer; out status: integer): string;
-    function  CriarVinil(id_vinil: integer; nome_vinil, artista_vinil, capa_vinil:string; out status: integer): string;
-    function AlterarVinil(id_vinil: integer; out status: integer): string;
+    function  ListarVinil(id_vinil: integer; out status: integer): string;
+    function   CriarVinil(id_vinil: integer; nome_vinil, artista_vinil, capa_vinil:string; out status: integer): string;
+    function AlterarVinil(id_vinil: integer; nome_vinil, artista_vinil, capa_vinil:string; out status: integer): string;
     function DeletarVinil(id_vinil: integer; out status: integer): string;
 
     { Private declarations }
@@ -232,28 +232,136 @@ begin
 end;
 
 // funcao de endpoint de ALTERAR o vinil
-function TDM.AlterarVinil(id_vinil: integer; out status: integer): string;
+function TDM.AlterarVinil(id_vinil: integer;
+                          nome_vinil, artista_vinil, capa_vinil :string;
+                          out status: integer) : string;
 var
-  json : uRESTDWJSONObject.TJSONValue;
-  erro : string;
-  qry : TFDQuery;
-
+    json : TJSONObject;
+    qry : TFDQuery;
+    foto_bmp : TBitmap;
 begin
+    try
+        json := TJSONObject.Create;
 
+        qry := TFDQuery.Create(nil);
+        qry.Connection := dm.conn;
+
+
+        // Validações dos parametros...
+        if (nome_vinil = '') then
+        begin
+            json.AddPair('retorno', 'Informe todos os parâmetros');
+            Status := 400;
+            Result := json.ToString;
+            exit;
+        end;
+
+        // Criar foto bitmap...
+        try
+            foto_bmp := TFunctions.BitmapFromBase64(capa_vinil);
+        except on ex:exception do
+            begin
+                json.AddPair('retorno', 'Erro ao criar foto no servidor: ' + ex.Message);
+                Status := 400;
+                Result := json.ToString;
+                exit;
+            end;
+        end;
+
+
+        try
+            qry.SQL.Add('UPDATE TAB_VINIL SET NOME_VINIL=:NOME_VINIL, ARTISTA_VINIL=:ARTISTA_VINIL, CAPA_VINIL=:CAPA_VINIL');
+            qry.SQL.Add('WHERE ID_VINIL=:ID_VINIL');
+            qry.ParamByName('ID_VINIL').Value := id_vinil;
+            qry.ParamByName('NOME_VINIL').Value := nome_vinil;
+            qry.ParamByName('ARTISTA_VINIL').Value := artista_vinil;
+            qry.ParamByName('CAPA_VINIL').Assign(foto_bmp);
+            qry.ExecSQL;
+
+            json.AddPair('retorno', 'OK');
+            json.AddPair('id_vinil', id_vinil.ToString);
+            Status := 200;
+
+        except on ex:exception do
+            begin
+                json.AddPair('retorno', ex.Message);
+                Status := 500;
+            end;
+        end;
+
+
+        Result := json.ToString;
+
+    finally
+        json.DisposeOf;
+        qry.DisposeOf;
+    end;
 
 end;
 
 // funcao de endpoint de DELETAR o vinil
-function TDM.DeletarVinil(id_vinil: integer; out status: integer): string;
+function TDM.DeletarVinil(id_vinil: integer;
+                          out status: integer): string;
 var
-  json : uRESTDWJSONObject.TJSONValue;
-  erro : string;
+  json : TJSONObject;
   qry : TFDQuery;
 
 begin
+  try
 
 
+    //instanciando
+    json := TJSONObject.Create;
+
+    qry := TFDQuery.Create(nil);
+    qry.Connection := dm.conn;
+
+    //validações dos parametros...
+    if (id_vinil <= 0) then
+    begin
+      json.AddPair('retorno', 'Informe todos os parametros');
+      status := 400;
+      Result := json.toString;
+      exit;
+    end;
+
+
+    // serializando com json
+    try
+      dm.conn.StartTransaction;
+
+      qry.SQL.Add('DELETE FROM TAB_VINIL');
+      QRY.SQL.Add('WHERE ID_VINIL=:ID_VINIL');
+      qry.ParamByName('ID_VINIL').Value := ID_VINIL;
+      qry.ExecSQL;
+
+      json.AddPair('retorno', 'ok');
+      json.AddPair('ID_VINIL', ID_VINIL.ToString);
+      status := 200;
+
+
+      dm.conn.Commit;
+
+    except on ex:exception do
+      begin
+        dm.conn.Rollback;
+        json.AddPair('retorno', ex.Message);
+        status := 500;
+
+      end;
+
+
+    end;
+
+  finally
+    // limpa o objeto da memoria
+    qry.DisposeOf;
+    json.DisposeOf;
+
+
+    end;
 end;
+
 
 
 
@@ -266,16 +374,31 @@ begin
   //aqui montamos o que vai acontecer quando a requisicao chegar
   //no caso de get vamos listar o vinil
   if RequestType = TRequestType.rtGet then
-    Result := ListarVinil(Params.ItemsString['id_vinil'].AsInteger, StatusCode )
+    Result := ListarVinil(Params.ItemsString['id_vinil'].AsInteger,
+                          StatusCode )
   else
   if RequestType = TRequestType.rtPost then
     Result := CriarVinil(Params.ItemsString['id_vinil'].AsInteger,
                          Params.ItemsString['nome_vinil'].AsString,
                          Params.ItemsString['artista_vinil'].AsString,
                          Params.ItemsString['capa_vinil'].AsString,
-                         StatusCode);
+                         StatusCode)
+  else
+  if RequestType = TRequestType.rtDelete then
+    Result := DeletarVinil(Params.ItemsString['id_vinil'].AsInteger,
+                           StatusCode)
+  else
+  if RequestType = TRequestType.rtPatch then
+    Result := AlterarVinil(Params.ItemsString['id_vinil'].AsInteger,
+                           Params.ItemsString['nome_vinil'].AsString,
+                           Params.ItemsString['artista_vinil'].AsString,
+                           Params.ItemsString['capa_vinil'].AsString,
+                           StatusCode);
+
+
 
 
 end;
 
 end.
+
